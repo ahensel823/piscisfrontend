@@ -1,0 +1,82 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: poppins;
+  }
+.today {
+  border-width: 2px;
+}
+.in-prev-month,
+.in-next-month {
+  opacity: 0.5;
+}
+table {
+  font-family: inherit;
+  width: 100%;
+}
+.tablas {
+  border-style: solid;
+  border-width: 2px;
+}
+.mes {
+  align-self: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-decoration: underline 3px;
+}
+th {
+  margin-left: 16px;
+  text-align: center;
+}
+td.tablas {
+  width: 100px;
+  border: 2px solid;
+}
+.caja {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.buttons {
+ align-self: center;
+}
+.button {
+  margin-top: 15px;
+  width: 8vw;
+  border-radius: 20px;
+}
+.reservado {
+  background-color: hsla(0, 100%, 50%, 0.4);
+  border-style: solid;
+  border-width: 2px;
+}
+.habitaciones {
+  background-color:hsla(290,100%,50%,0.3)
+}
+.a4 {
+  border-top-width: 10px;
+  border-top-color: black;;
+}
+.a8 {
+  border-top-width: 10px;
+  border-top-color: black;;
+}
+.hover {
+  width: 145px;
+  text-align: center;
+  font-style: italic;
+}
+.containe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.day {
+  text-align: center;
+  width: 200px;
+}

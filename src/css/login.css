@@ -1,0 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+.login {
+  font-family: poppins;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: url("../assets/fondo.jpg");
+  background-size: cover
+}
+.logo {
+  margin-bottom: 45px;
+  margin-top: 20px;
+}
+.loginTitle {
+  font-family: poppins;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+.error {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+
+
