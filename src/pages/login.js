@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import loginService from '../services/loginService'
+import reservaService from '../services/reservaService'
 import LoginForm from '../componentes/LoginForm'
 import Notification from '../componentes/Notification'
 
@@ -9,6 +10,15 @@ const Login = () => {
   const [username, setUsername] = useState()
   const [password, setPassword] = useState()
   const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const loggedUserJSON = window.localStorage.getItem('loggedNoteAppUser')
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON)
+      setUser(user)
+      reservaService.setToken(user.token)
+    }
+  }, [])
 
   const handleLogin = async (event) => {
     event.preventDefault()
@@ -21,6 +31,8 @@ const Login = () => {
       window.localStorage.setItem(
         'loggedNoteAppUser', JSON.stringify(user)
       )
+
+      reservaService.setToken(user.token)
 
       setUser(user)
       setUsername('')
@@ -35,7 +47,7 @@ const Login = () => {
 
   function Link () {
     return (
-      window.location.href = './calendario'
+      window.location.href = './home'
     )
   }
 
@@ -56,3 +68,4 @@ const Login = () => {
 }
 
 export default Login
+
