@@ -12,17 +12,6 @@ const getAll = () => {
   return request.then(response => response.data)
 }
 
-const getHabitacion = (habitacion) => {
-  const config = {
-    headers: {
-      Authorization: token
-    }
-  }
-
-  const request = axios.get(`${baseUrl}/${habitacion}`, config)
-  return request.then(response => response.data)
-}
-
 const create = (newObject) => {
   const config = {
     headers: {
@@ -56,4 +45,4 @@ const erase = (id) => {
   return request.then(response => response.data)
 }
 
-export default { getAll, getHabitacion, create, update, erase, setToken }
+export default { getAll, create, update, erase, setToken }
