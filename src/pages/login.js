@@ -32,8 +32,6 @@ const Login = () => {
         'loggedNoteAppUser', JSON.stringify(user)
       )
 
-      reservaService.setToken(user.token)
-
       setUser(user)
       setUsername('')
       setPassword('')
