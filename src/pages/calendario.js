@@ -7,19 +7,11 @@ import ReservaForm from '../componentes/ReservaForm.js'
 import Calendar from '../componentes/Calendar'
 import '../css/home.css'
 
-const Home = () => {
+const Calendario = () => {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
   const [reservas, setReservas] = useState([])
-  
-  useEffect(() => {
-    const loggedUserJSON = window.localStorage.getItem('loggedNoteAppUser')
-    if (loggedUserJSON) {
-      const user = JSON.parse(loggedUserJSON)
-      reservaService.setToken(user.token)
-    }
-  }, [])
   
   useEffect(() => {
     reservaService
@@ -28,7 +20,7 @@ const Home = () => {
         setReservas(initialReservas)
       })
   }, [])
-
+  
   const addReserva = (newObject) => {
     reservaService
       .create(newObject)
@@ -54,4 +46,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Calendario
