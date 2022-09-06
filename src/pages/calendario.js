@@ -12,7 +12,7 @@ const Calendario = () => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
   const [reservas, setReservas] = useState([])
-  
+
   useEffect(() => {
     reservaService
       .getAll()
@@ -20,7 +20,7 @@ const Calendario = () => {
         setReservas(initialReservas)
       })
   }, [])
-  
+
   const addReserva = (newObject) => {
     reservaService
       .create(newObject)
