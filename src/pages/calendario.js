@@ -12,13 +12,21 @@ const Home = () => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
   const [reservas, setReservas] = useState([])
-
+  
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem('loggedNoteAppUser')
     if (loggedUserJSON) {
       const user = JSON.parse(loggedUserJSON)
       reservaService.setToken(user.token)
     }
+  }, [])
+  
+  useEffect(() => {
+    reservaService
+      .getAll()
+      .then(initialReservas => {
+        setReservas(initialReservas)
+      })
   }, [])
 
   const addReserva = (newObject) => {
